@@ -1,305 +1,455 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dr. Banalaxmi Brahma | Academic Profile</title>
+    <title>Dr. Banalaxmi Brahma</title>
 
     <meta name="description"
-          content="Academic website of Dr. Banalaxmi Brahma, Assistant Professor, Department of Computer Science and Engineering.">
+          content="Academic website of Dr. Banalaxmi Brahma, Assistant Professor, Department of Computer Science and Engineering, NIT Jalandhar.">
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #333;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #292929;
             background: #ffffff;
+            line-height: 1.65;
         }
 
-        nav {
-            background: #1f2937;
-            padding: 16px 8%;
+        a {
+            color: #234f7d;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+
+        .topbar {
+            border-bottom: 1px solid #dddddd;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            max-width: 1050px;
+            margin: auto;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav .name {
-            color: white;
-            font-size: 20px;
+        .site-name {
+            font-size: 19px;
             font-weight: bold;
+            color: #222222;
         }
 
-        nav a {
-            color: #e5e7eb;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
+        .nav-links a {
+            margin-left: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #444444;
         }
 
-        nav a:hover {
-            color: white;
-        }
+        /* Main */
 
-        .hero {
-            background: #f3f4f6;
-            padding: 80px 8%;
-        }
-
-        .hero-content {
-            max-width: 1000px;
+        main {
+            max-width: 1050px;
             margin: auto;
+            padding: 0 30px;
         }
 
-        .hero h1 {
-            font-size: 44px;
-            color: #111827;
-            margin-bottom: 10px;
+        .intro {
+            padding: 65px 0 45px;
+            border-bottom: 1px solid #dddddd;
         }
 
-        .hero h2 {
-            font-size: 22px;
+        .intro h1 {
+            margin: 0 0 8px;
+            font-size: 40px;
             font-weight: normal;
-            color: #4b5563;
-            margin-bottom: 20px;
+            color: #1f1f1f;
         }
 
-        .hero p {
-            max-width: 800px;
-            font-size: 17px;
-            color: #4b5563;
+        .position {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 4px;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 8%;
+        .institution {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #555555;
         }
 
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2.section-title {
-            font-size: 28px;
-            color: #111827;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 8px;
-        }
-
-        .research-list {
-            padding-left: 20px;
-        }
-
-        .research-list li {
-            margin-bottom: 8px;
-        }
-
-        .links a {
-            display: inline-block;
-            margin-right: 20px;
-            margin-top: 10px;
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: #1f2937;
-            color: #d1d5db;
-            text-align: center;
-            padding: 25px;
+        .intro-links {
+            margin-top: 22px;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
 
+        .intro-links span {
+            margin: 0 8px;
+            color: #aaaaaa;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 42px 0;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        section h2 {
+            margin: 0 0 18px;
+            font-size: 25px;
+            font-weight: normal;
+            color: #222222;
+        }
+
+        section p {
+            max-width: 850px;
+            margin: 0 0 15px;
+        }
+
+        /* Research */
+
+        .research-list {
+            margin: 10px 0 0;
+            padding-left: 22px;
+        }
+
+        .research-list li {
+            margin-bottom: 6px;
+        }
+
+        /* Publications */
+
+        .publication {
+            margin-bottom: 25px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+        }
+
+        .publication-details {
+            margin-top: 3px;
+            color: #555555;
+        }
+
+        .publication-note {
+            color: #777777;
+            font-style: italic;
+        }
+
+        /* Simple two-column information */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 8px 25px;
+            max-width: 850px;
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            max-width: 1050px;
+            margin: auto;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #777777;
+        }
+
+        /* Mobile */
+
         @media (max-width: 700px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
+
+            .nav {
+                display: block;
+                padding: 15px 20px;
             }
 
-            nav a {
-                margin-left: 0;
-                margin-right: 15px;
+            .nav-links {
+                margin-top: 10px;
             }
 
-            .hero h1 {
-                font-size: 34px;
+            .nav-links a {
+                margin: 0 18px 0 0;
+            }
+
+            main {
+                padding: 0 20px;
+            }
+
+            .intro {
+                padding: 45px 0 35px;
+            }
+
+            .intro h1 {
+                font-size: 32px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 2px;
+                margin-bottom: 12px;
             }
         }
     </style>
 </head>
 
+
 <body>
 
-    <nav>
-        <div class="name">Banalaxmi Brahma</div>
+<header class="topbar">
 
-        <div>
+    <nav class="nav">
+
+        <div class="site-name">
+            Banalaxmi Brahma
+        </div>
+
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
             <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
             <a href="#contact">Contact</a>
         </div>
+
     </nav>
 
+</header>
 
-    <header class="hero">
-        <div class="hero-content">
 
-            <h1>Dr. Banalaxmi Brahma</h1>
+<main>
 
-            <h2>
-                Assistant Professor (Grade-II) · Computer Science and Engineering
-            </h2>
+    <!-- INTRODUCTION -->
 
-            <p>
-                Dr. B. R. Ambedkar National Institute of Technology Jalandhar
-            </p>
+    <div class="intro">
 
-            <p style="margin-top: 20px;">
-                My research interests lie at the intersection of artificial
-                intelligence, machine learning and renewable energy systems,
-                with a focus on data-driven and physics-informed approaches
-                for solar energy and photovoltaic applications.
-            </p>
+        <h1>Dr. Banalaxmi Brahma</h1>
+
+        <div class="position">
+            Assistant Professor (Grade-II)
+        </div>
+
+        <div class="institution">
+            Department of Computer Science and Engineering<br>
+            Dr. B. R. Ambedkar National Institute of Technology Jalandhar
+        </div>
+
+        <div class="intro-links">
+
+            <a href="https://scholar.google.com/citations?hl=en&user=HD958GcAAAAJ"
+               target="_blank">
+                Google Scholar
+            </a>
+
+            <span>|</span>
+
+            <a href="https://www.linkedin.com/in/dr-banalaxmi-brahma-407b82114/"
+               target="_blank">
+                LinkedIn
+            </a>
 
         </div>
-    </header>
+
+    </div>
 
 
-    <main class="container">
+    <!-- ABOUT -->
 
-        <section id="about">
+    <section id="about">
 
-            <h2 class="section-title">About</h2>
+        <h2>About</h2>
 
-            <p>
-                I am an Assistant Professor in the Department of Computer
-                Science and Engineering at Dr. B. R. Ambedkar National
-                Institute of Technology Jalandhar.
-            </p>
+        <p>
+            I am an Assistant Professor (Grade-II) in the Department of
+            Computer Science and Engineering at Dr. B. R. Ambedkar National
+            Institute of Technology Jalandhar.
+        </p>
 
-            <p style="margin-top: 15px;">
-                I completed my Ph.D. from the National Institute of
-                Technology Bhopal. My academic work combines machine
-                learning, deep learning and data-driven modelling with
-                applications in renewable energy and photovoltaic systems.
-            </p>
+        <p>
+            I completed my Ph.D. from the National Institute of Technology
+            Bhopal. My research involves the application of artificial
+            intelligence and machine learning to problems involving
+            renewable energy and photovoltaic systems.
+        </p>
 
-        </section>
+        <p>
+            My work combines data-driven modelling with physical knowledge
+            of the underlying systems, with an emphasis on forecasting,
+            modelling and uncertainty estimation.
+        </p>
 
-
-        <section id="research">
-
-            <h2 class="section-title">Research Interests</h2>
-
-            <ul class="research-list">
-
-                <li>Artificial Intelligence and Machine Learning</li>
-
-                <li>Deep Learning for Time-Series Forecasting</li>
-
-                <li>Solar Irradiance and Renewable Energy Forecasting</li>
-
-                <li>Photovoltaic Power Modelling and Forecasting</li>
-
-                <li>Physics-Informed Machine Learning</li>
-
-                <li>Uncertainty Quantification and Prediction Intervals</li>
-
-                <li>Spatiotemporal Modelling of Renewable Energy Data</li>
-
-            </ul>
-
-        </section>
+    </section>
 
 
-        <section id="teaching">
+    <!-- RESEARCH -->
 
-            <h2 class="section-title">Teaching</h2>
+    <section id="research">
 
-            <p>
-                Courses taught include subjects related to computer
-                programming, data visualization, machine learning,
-                deep learning and data science.
-            </p>
+        <h2>Research</h2>
 
-        </section>
+        <p>
+            My current research interests include:
+        </p>
+
+        <ul class="research-list">
+
+            <li>Artificial Intelligence and Machine Learning</li>
+
+            <li>Deep Learning and Time-Series Forecasting</li>
+
+            <li>Solar Irradiance and Renewable Energy Forecasting</li>
+
+            <li>Photovoltaic Power Modelling and Forecasting</li>
+
+            <li>Physics-Informed Machine Learning</li>
+
+            <li>Uncertainty Quantification and Prediction Intervals</li>
+
+            <li>Spatiotemporal Modelling of Renewable Energy Data</li>
+
+        </ul>
+
+    </section>
 
 
-        <section id="publications">
+    <!-- PUBLICATIONS -->
 
-            <h2 class="section-title">Selected Publications</h2>
+    <section id="publications">
 
-            <p>
-                A complete list of publications will be added here.
-            </p>
+        <h2>Publications</h2>
 
-            <div class="links">
+        <p>
+            A complete list of publications is available through my
+            <a href="https://scholar.google.com/citations?hl=en&user=HD958GcAAAAJ"
+               target="_blank">Google Scholar profile</a>.
+        </p>
 
-                <a href="#" target="_blank">
-                    Google Scholar
-                </a>
+        <div class="publication">
 
-                <a href="#" target="_blank">
-                    ORCID
-                </a>
-
+            <div class="publication-title">
+                Selected publications will be listed here.
             </div>
 
-        </section>
-
-
-        <section id="contact">
-
-            <h2 class="section-title">Contact</h2>
-
-            <p>
-                Department of Computer Science and Engineering<br>
-                Dr. B. R. Ambedkar National Institute of Technology Jalandhar
-            </p>
-
-            <div class="links">
-
-                <a href="#">
-                    Email
-                </a>
-
-                <a href="#" target="_blank">
-                    Google Scholar
-                </a>
-
-                <a href="#" target="_blank">
-                    ORCID
-                </a>
-
-                <a href="#" target="_blank">
-                    GitHub
-                </a>
-
+            <div class="publication-details">
+                Publication details and DOI links can be added as the
+                list is prepared.
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <footer>
-        © 2026 Dr. Banalaxmi Brahma · Academic Website
-    </footer>
+    <!-- TEACHING -->
+
+    <section id="teaching">
+
+        <h2>Teaching</h2>
+
+        <p>
+            I teach courses in areas including computer programming,
+            data visualization, machine learning, deep learning and
+            data science.
+        </p>
+
+        <p>
+            I am interested in connecting fundamental concepts with
+            practical data-driven applications and examples.
+        </p>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="info-grid">
+
+            <div class="info-label">Ph.D.</div>
+            <div>
+                National Institute of Technology Bhopal
+            </div>
+
+            <div class="info-label">M.Tech.</div>
+            <div>
+                Details to be added
+            </div>
+
+            <div class="info-label">B.Tech.</div>
+            <div>
+                Details to be added
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Department of Computer Science and Engineering<br>
+            Dr. B. R. Ambedkar National Institute of Technology Jalandhar
+        </p>
+
+        <p>
+            Academic profiles:
+            <a href="https://scholar.google.com/citations?hl=en&user=HD958GcAAAAJ"
+               target="_blank">Google Scholar</a>
+            &nbsp;·&nbsp;
+            <a href="https://www.linkedin.com/in/dr-banalaxmi-brahma-407b82114/"
+               target="_blank">LinkedIn</a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Dr. Banalaxmi Brahma
+
+</footer>
 
 </body>
 </html>
+```
